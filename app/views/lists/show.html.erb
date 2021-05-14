@@ -1,0 +1,30 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random);">
+  <div class="container">
+    <h1><%= @list.name %></h1>
+  </div>
+</div>
+
+
+
+<section class="container">
+  <ul class="movies">
+    <% @list.movies.each do |movie| %>
+      <% bookmark = Bookmark.find(movie.bookmark_ids) %>
+      <li class="card-trip">
+        <img
+          src="<%= movie.poster_url %>"
+        />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= movie.title %></h2>
+            <p><%= movie.overview %></p>
+          </div>
+        </div>
+        <div class="bookmark">
+          <span><%= bookmark[0].comment %></span>
+          <%= link_to "Delete", "/"%>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</section>

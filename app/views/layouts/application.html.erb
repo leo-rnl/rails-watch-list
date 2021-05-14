@@ -11,7 +11,19 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <nav>
+    <span>Movies</span>
+    <ul>
+      <li>
+        <%= link_to "My Lists", lists_path %>
+      </li>
+      <li>
+        <%= link_to "New List", new_list_path %>
+      </li>
+    </ul>
+  </nav>
+
   <body>
-    <%= yield %>
+      <%= yield %>
   </body>
 </html>

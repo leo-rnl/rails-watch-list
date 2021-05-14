@@ -1,0 +1,29 @@
+.lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  padding: 0;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 0;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: 0.2s all ease;
+    min-height: 300px;
+    border-radius: 6px;
+    &:hover {
+      background-size: 150%;
+      transform: scale(1.04);
+    }
+  }
+}

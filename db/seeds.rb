@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Bookmark.create(content: "C'est un film cool", movie_id: 1, list_id:2)
+Bookmark.create(content: "C'est un film cool et tout", movie_id: 2, list_id:2)
